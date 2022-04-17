@@ -21,7 +21,7 @@ public class NettyClient {
                     .channel(NioSocketChannel.class) // 使用NioSocketChannel作为客户端的通道实现
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
-                        protected void initChannel(SocketChannel ch) throws Exception {
+                        protected void initChannel(SocketChannel ch) {
                             //加入处理器
                             ch.pipeline().addLast(new NettyClientHandler());
                         }

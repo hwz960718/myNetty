@@ -12,7 +12,6 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
      * 当客户端连接服务器完成就会触发该方法
      *
      * @param ctx
-     * @throws Exception
      */
     @Override
     public void channelActive(ChannelHandlerContext ctx) {

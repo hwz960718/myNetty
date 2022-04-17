@@ -15,7 +15,6 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
      * 当客户端连接服务器完成就会触发该方法
      *
      * @param ctx
-     * @throws Exception
      */
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
@@ -27,7 +26,6 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
      *
      * @param ctx 上下文对象, 含有通道channel，管道pipeline
      * @param msg 就是客户端发送的数据
-     * @throws Exception
      */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
@@ -42,7 +40,6 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
      * 数据读取完毕处理方法
      *
      * @param ctx
-     * @throws Exception
      */
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) {
@@ -55,7 +52,6 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
      *
      * @param ctx
      * @param cause
-     * @throws Exception
      */
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
